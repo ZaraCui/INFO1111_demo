@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/next" }
+  ],
+  "redirects": [
+    {
+      "source": "/form-submitted",
+      "destination": "/thanks",
+      "statusCode": 302
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/weekly-report",
+      "schedule": "0 10 * * 1"
+    }
+  ],
+  "regions": ["syd1"]
+}
